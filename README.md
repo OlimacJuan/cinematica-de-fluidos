@@ -65,7 +65,13 @@ Basados en la refracción de la luz por cambios de densidad ($\rho$), son vitale
 
 El movimiento de un elemento fluido se descompone en traslación, rotación, deformación lineal y deformación por cortante. Debido a la naturaleza continua del fluido, estas se expresan como tasas temporales mediante el **Tensor de Tasa de Deformación** ($\varepsilon_{ij}$):
 
-$$\varepsilon_{ij} = \begin{pmatrix} \frac{\partial u}{\partial x} & \frac{1}{2}\left(\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x}\right) & \frac{1}{2}\left(\frac{\partial u}{\partial z} + \frac{\partial w}{\partial x}\right) \\ \frac{1}{2}\left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) & \frac{\partial v}{\partial y} & \frac{1}{2}\left(\frac{\partial v}{\partial z} + \frac{\partial w}{\partial y}\right) \\ \frac{1}{2}\left(\frac{\partial w}{\partial x} + \frac{\partial u}{\partial z}\right) & \frac{1}{2}\left(\frac{\partial w}{\partial y} + \frac{\partial v}{\partial z}\right) & \frac{\partial w}{\partial z} \end{pmatrix}$$
+```math
+\varepsilon_{ij} = \begin{pmatrix} 
+\frac{\partial u}{\partial x} & \frac{1}{2}\left(\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x}\right) & \frac{1}{2}\left(\frac{\partial u}{\partial z} + \frac{\partial w}{\partial x}\right) \\ 
+\frac{1}{2}\left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) & \frac{\partial v}{\partial y} & \frac{1}{2}\left(\frac{\partial v}{\partial z} + \frac{\partial w}{\partial y}\right) \\ 
+\frac{1}{2}\left(\frac{\partial w}{\partial x} + \frac{\partial u}{\partial z}\right) & \frac{1}{2}\left(\frac{\partial w}{\partial y} + \frac{\partial v}{\partial z}\right) & \frac{\partial w}{\partial z} 
+\end{pmatrix}
+```
 
 - **Tasa de Deformación Lineal:** Los componentes de la diagonal principal ($\varepsilon_{xx}, \varepsilon_{yy}, \varepsilon_{zz}$).
 - **Tasa de Dilatación Volumétrica:** Se define como la divergencia del campo de velocidades: $\frac{1}{\mathcal{V}}\frac{D\mathcal{V}}{Dt} = \nabla \cdot \vec{V}$. Para un **flujo incompresible**, esta suma debe ser idénticamente cero.
