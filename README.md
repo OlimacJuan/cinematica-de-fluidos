@@ -39,9 +39,9 @@ La derivada material (D/Dt) actúa como el puente analítico que permite aplicar
 La aceleración de una partícula se expresa como la derivada material de la velocidad: $\vec{a} = \frac{D\vec{V}}{Dt} = \frac{\partial\vec{V}}{\partial t} + (\vec{V} \cdot \nabla)\vec{V}$
 
 1. **Aceleración Local ($\partial \vec{V}/\partial t$):** Refleja la falta de estacionariedad. En flujos estacionarios, este término se anula.
-2. **Aceleración Advectiva ($\vec{V} \cdot \nabla)\vec{V}$):** Explica el cambio de velocidad debido al movimiento de la partícula hacia regiones con diferentes valores de campo. Este término es responsable de la aceleración en flujos estacionarios a través de conductos de sección variable.
+2. **Aceleración Convectiva ($\vec{V} \cdot \nabla)\vec{V}$):** Explica el cambio de velocidad debido al movimiento de la partícula hacia regiones con diferentes valores de campo. Este término es responsable de la aceleración en flujos estacionarios a través de conductos de sección variable.
 
-**Caso de Estudio: Aceleración en una Boquilla (Ejemplo 4-2)** Considérese una boquilla de $L = 0.325 \text{ ft}$ con un diámetro de entrada $D_{in} = 0.420 \text{ in}$ y salida $D_{out} = 0.182 \text{ in}$. Con un caudal de $\dot{V} = 0.841 \text{ gpm} (0.00187 \text{ ft}^3/\text{s})$, las velocidades medias resultan en $u_{in} \approx 1.95 \text{ ft/s}$ y $u_{out} \approx 10.4 \text{ ft/s}$. La aceleración axial estimada es: $a_x \cong \frac{u_{out}^2 - u_{in}^2}{2L} = 160 \text{ ft/s}^2$ Esto representa casi cinco veces la aceleración de la gravedad (5g), evidenciando que la aceleración advectiva puede ser masiva incluso en ausencia de cambios temporales.
+**Caso de Estudio: Aceleración en una Boquilla (Ejemplo 4-2)** Considérese una boquilla de $L = 0.325 \text{ ft}$ con un diámetro de entrada $D_{in} = 0.420 \text{ in}$ y salida $D_{out} = 0.182 \text{ in}$. Con un caudal de $\dot{V} = 0.841 \text{ gpm} (0.00187 \text{ ft}^3/\text{s})$, las velocidades medias resultan en $u_{in} \approx 1.95 \text{ ft/s}$ y $u_{out} \approx 10.4 \text{ ft/s}$. La aceleración axial estimada es: $a_x \cong \frac{u_{out}^2 - u_{in}^2}{2L} = 160 \text{ ft/s}^2$ Esto representa casi cinco veces la aceleración de la gravedad ($g \approx 32.2 \text{ ft/s}^2$), evidenciando que la aceleración convectiva puede ser masiva incluso en ausencia de cambios temporales.
 
 ## 4. Patrones de Flujo y Técnicas de Visualización
 
@@ -95,7 +95,7 @@ Para una propiedad extensiva B y su correspondiente propiedad intensiva $b = B/m
 $$\frac{dB_{sys}}{dt} = \frac{d}{dt} \int_{CV} \rho b \, d\mathcal{V} + \int_{CS} \rho b \vec{V}_r \cdot \vec{n} \, dA$$
 
 1. **Término de Volumen (Unsteady):** Tasa de acumulación o disminución de B dentro del CV.
-2. **Término de Superficie (Advectivo):** Flujo neto de B a través de las superficies de control. Se utiliza la **velocidad relativa** $\vec{V}_r = \vec{V} - \vec{V}_{CS}$ para considerar superficies en movimiento o deformación (como álabes de turbina).
+2. **Término de Superficie (Convectivo):** Flujo neto de B a través de las superficies de control. Se utiliza la **velocidad relativa** $\vec{V_r} = \vec{V} - \vec{V_{CS}}$ para considerar superficies en movimiento o deformación (como álabes de turbina).
 
 El RTT se simplifica para flujos estacionarios eliminando el término temporal, igualando el cambio en el sistema al flujo neto a través de las fronteras.
 
@@ -103,4 +103,4 @@ El RTT se simplifica para flujos estacionarios eliminando el término temporal, 
 
 La maestría en cinemática de fluidos permite al ingeniero predecir el comportamiento del flujo antes de resolver las complejas ecuaciones de fuerzas. En aplicaciones de **PIV (Velocimetría de Imágenes de Partículas)**, la identificación de contornos de vorticidad es lo que permite localizar con precisión el "vórtice de punta de ala" en aeronaves, un factor crítico para la seguridad y la eficiencia.
 
-Desde el cálculo de la aceleración advectiva en boquillas industriales para evitar la cavitación, hasta la aplicación del RTT en el diseño de sistemas de propulsión, los conceptos de este capítulo (derivada material, tensores de deformación y formalismo de control de volumen) constituyen el lenguaje técnico indispensable para la ingeniería de fluidos avanzada.
+Desde el cálculo de la aceleración convectiva en boquillas industriales para evitar la cavitación, hasta la aplicación del RTT en el diseño de sistemas de propulsión, los conceptos de este capítulo (derivada material, tensores de deformación y formalismo de control de volumen) constituyen el lenguaje técnico indispensable para la ingeniería de fluidos avanzada.
